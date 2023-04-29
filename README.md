@@ -16,11 +16,13 @@ The business objective of the bank is very clear: Whether a given customer will 
 ##### Many models were built in an effort to give best results to our customer (i.e., Portuguese Bank). Below is a summary of each of their performance
 
 
-| <span style='background:orange'>Model | <span style='background:orange'>Train Time | <span style='background:orange'>Train Accuracy | <span style='background:orange'>Test Accuracy |
-| <span style='background:orange'> Basic Logistic Regression | <span style='background:orange'>0.29 sec | <span style='background:orange'>88.73 | <span style='background:orange'>88.73 |
-| <span style='background:orange'>Basic kNN | <span style='background:orange'>0.05 sec | <span style='background:orange'>89.08 | <span style='background:orange'>87.71 |
-| <span style='background:orange'>Basic Decision-tree | <span style='background:orange'>0.38 sec | <span style='background:orange'>91.82 | <span style='background:orange'>86.31 |
-| <span style='background:orange'> Basic SVM | <span style='background:orange'>24.9 sec | <span style='background:orange'>88.87 | <span style='background:orange'>88.69 |
+| Model |  Train Time | Train Accuracy | Test Accuracy |
+| ----- | ------------ | ------------- | ------------- |
+| Basic Logistic Regression | 0.29 sec | 88.73 | 88.73 |
+| Basic kNN |  0.05 sec | 89.08 | 87.71 |
+| Basic Decision-tree | 0.38 sec | 91.82 | 86.31 |
+| Basic SVM | 24.9 sec | 88.87 | 88.69 |
+
 
 
 I did hyper-parameter fine-tuning of the models and also have adjusted the performance metric from Accuracy to Weighted F1-score.
@@ -39,10 +41,11 @@ I'm going to use the Weighted Average of the F1-score, that gives weights propor
 
 ##### Below is a summary of the models after hyper-parameter tuning along with the chosen best parameters
     
-| <span style='background:orange'>Model | <span style='background:orange'> Parameters | <span style='background:orange'> Train Time | <span style='background:orange'> Train F1 score | <span style='background:orange'> Test F1 score |
-| <span style='background:orange'> Tuned Logistic Regr | <span style='background:orange'> {'lgr__C': 1e-05, 'lgr__max_iter': 200} | <span style='background:orange'> 0.95 sec | <span style='background:orange'>83.44 | <span style='background:orange'>83.44|
-| <span style='background:orange'> | Tuned kNN | <span style='background:orange'> {'knn__n_neighbors': 20} | <span style='background:orange'>69.97 sec | <span style='background:orange'>84.27 | <span style='background:orange'>83.74 |
-| <span style='background:orange'>Tuned Decision tree | <span style='background:orange'>{'dt__max_depth': 10, 'dt__min_samples_split':... | 0.51 sec | <span style='background:orange'>83.44 | <span style='background:orange'>83.44 |
+| Model | Parameters | Train Time | Train F1 score | Test F1 score |
+| ----- | ------------ | ------------- | ------------- | ---------- |
+| Tuned Logistic Regr |  {'lgr__C': 1e-05, 'lgr__max_iter': 200} | 0.95 sec | 83.44 | 83.44 |
+| Tuned kNN | {'knn__n_neighbors': 20} | 69.97 sec | 84.27 | 83.74 |
+| Tuned Decision tree | {'dt__max_depth': 10, 'dt__min_samples_split':... | 0.51 sec | 83.44 | 83.44 |
 
 
 ### Conclusion
